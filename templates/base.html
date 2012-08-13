@@ -2,10 +2,14 @@
 <html lang-"en">
   <head>
     <title>Beyond Reel Productions</title>
+    {% block css %}
+    <link href='css/style.css' rel='stylesheet' type='text/css' media='screen' title='no title' charset='utf-8'>
+    {% endblock %}
   </head>
   <body>
     <header>
     {% block header %}
+    {% include "header.html" %}
     {% endblock %}
     </header>
     <div class='container'>
