@@ -1,6 +1,19 @@
 import sys
+from collections import namedtuple
 
 from jinja2 import Environment, FileSystemLoader
+
+Member = namedtuple('Member', ['picture', 'name', 'position', 'description'])
+
+CREW = [
+    Member('juan.jpg', 'Juan Chavez', 'Executive', ''),
+    Member('eric.jpg', 'Eric Kleifield', 'Executive', ''),
+    Member('henry.jpg', 'Henry Dorfman', 'Executive', ''),
+    Member('sab.jpg', 'Sab Sikder', 'Producer', ''),
+    Member('christian.jpg', 'Christian Edghill', 'Camera Operator', ''),
+    Member('vishnu.jpg', 'Vishnu Devarakonda', 'Actor', ''),
+    Member('tatyana.jpg', 'Tatyana Zvereva', 'Actress', '')
+]
 
 def build_template(env, template_name, **kwargs):
     print "Building %s..." % template_name
@@ -15,7 +28,9 @@ def build_story(env):
     build_template(env, 'story.html')
 
 def build_crew(env):
-    build_template(env, 'crew.html')
+    build_template(env, 'crew.html',
+        crew=CREW
+    )
 
 def build_films(env):
     build_template(env, 'films.html')
