@@ -15,6 +15,15 @@ CREW = [
     Member('tatyana.jpg', 'Tatyana Zvereva', 'Actress', 'I got interested in acting when I was in first grade and got a role as an ant (who manages to chase away a goat off a farm) for a play our class was doing. Since then I was interested in theatre and telling a story and entertaining people. I joined up with BeyondReel when Henry asked me if I wanted to be in a short film. I said "yes" in a heartbeat and it was set.  I am currently studying at The Lee Strasberg Theatre in West Hollywood.')
 ]
 
+Film = namedtuple('Film', ['title', 'embed_code'])
+
+FILMS = [
+    Film('Dead Rush 2', '<iframe width="100%" height="100%" src="http://www.youtube.com/embed/TkSEiKcBu8E" frameborder="0" allowfullscreen></iframe>'),
+    Film('Wildernness', '<iframe width="100%" height="100%" src="http://www.youtube.com/embed/0wnURWEdGDU" frameborder="0" allowfullscreen></iframe>'),
+    Film('Boy Who Cried Pig', '<iframe width="100%" height="100%" src="http://www.youtube.com/embed/U7yP6dx6XlU" frameborder="0" allowfullscreen></iframe>'),
+    Film('Dead Rush', '<iframe width="100%" height="100%" src="http://www.youtube.com/embed/8tqDeZ7TX04" frameborder="0" allowfullscreen></iframe>')
+]
+
 def build_template(env, template_name, **kwargs):
     print "Building %s..." % template_name
     template = env.get_template(template_name)
@@ -29,11 +38,13 @@ def build_story(env):
 
 def build_crew(env):
     build_template(env, 'crew.html',
-        crew=CREW
+        crew=CREW,
     )
 
 def build_films(env):
-    build_template(env, 'films.html')
+    build_template(env, 'films.html',
+        films = FILMS
+    )
 
 def build_gallery(env):
     build_template(env, 'gallery.html')

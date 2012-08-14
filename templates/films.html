@@ -1,4 +1,8 @@
 {% extends "base.html" %}
 
 {% block container %}
+{% for film in films %}
+<h1>{{ film.title }}</h1>
+<div class='video'>{{ film.embed_code }}</div>
+{% endfor %}
 {% endblock container %}
