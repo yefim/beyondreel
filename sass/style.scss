@@ -135,10 +135,10 @@ footer {
         &.pos {
         }
       }
+      height: 170px;
       cursor: pointer;
       background-color: #eee;
-      width: 400px;
-      height: 170px;
+      margin-bottom: 10px;
       box-shadow: 0 0 10px #444;
       opacity: 0.9;
     }
@@ -150,5 +150,6 @@ footer {
     position: relative;
     vertical-align: top;
     display: inline-block;
+    width: 400px;
   }
 }
