@@ -1,1 +1,1 @@
-The site is live [here](http://yefim323.github.com/beyondreel/)
+The site is live [here](http://www.beyondreel.us/)
