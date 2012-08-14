@@ -19,7 +19,7 @@ Film = namedtuple('Film', ['title', 'embed_code'])
 
 FILMS = [
     Film('Dead Rush 2', '<iframe width="100%" height="100%" src="http://www.youtube.com/embed/TkSEiKcBu8E" frameborder="0" allowfullscreen></iframe>'),
-    Film('Wildernness', '<iframe width="100%" height="100%" src="http://www.youtube.com/embed/0wnURWEdGDU" frameborder="0" allowfullscreen></iframe>'),
+    Film('Wilderness', '<iframe width="100%" height="100%" src="http://www.youtube.com/embed/0wnURWEdGDU" frameborder="0" allowfullscreen></iframe>'),
     Film('Boy Who Cried Pig', '<iframe width="100%" height="100%" src="http://www.youtube.com/embed/U7yP6dx6XlU" frameborder="0" allowfullscreen></iframe>'),
     Film('Dead Rush', '<iframe width="100%" height="100%" src="http://www.youtube.com/embed/8tqDeZ7TX04" frameborder="0" allowfullscreen></iframe>')
 ]
