@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block container %}
+
+{% for member in crew %}
+
+  <div class='member'>
+    <div class='main'>
+      <img src='img/crew/{{ member.picture }}'>
+      <p class='name'>{{ member.name }}</p>
+      <p class='pos'><em>{{ member.position }}</em></p>
+    </div>
+    <div>{{ member.description }}</div>
+  </div>
+
+{% endfor %}
+
+{% endblock container %}
